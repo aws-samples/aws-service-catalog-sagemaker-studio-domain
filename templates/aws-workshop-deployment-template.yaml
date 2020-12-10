@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Service Catalog to create Data Science Portfolio and add Amazon SageMaker Studio as product.
+Parameters: 
+  S3Bucket:
+    Type: String
+    Description: "S3 Bucket"
+
+Resources:
+  DataSciencePortfolio:
+    Type: AWS::ServiceCatalog::Portfolio
+    Properties: 
+      AcceptLanguage: "en"
+      Description: "Tools for Data Science Team"
+      DisplayName: "Data Science Tools"
+      ProviderName: "IT"
+  
+  AmazonSageMakerStudioProduct:
+    Type: AWS::ServiceCatalog::CloudFormationProduct
+    Properties: 
+      AcceptLanguage: "en"
+      Description: "Amazon SageMaker Studio"
+      Name: "Amazon SageMaker Studio"
+      Owner: "IT"
+      ProvisioningArtifactParameters: 
+        - Info: 
+            LoadTemplateFromURL: !Sub "https://s3.amazonaws.com/${S3Bucket}/templates/amazon-sagemaker-studio-template.yaml"
+
+  AddProductToPortfolio:
+    Type: AWS::ServiceCatalog::PortfolioProductAssociation
+    Properties: 
+      AcceptLanguage: "en"
+      PortfolioId: !Ref DataSciencePortfolio
+      ProductId: !Ref AmazonSageMakerStudioProduct
