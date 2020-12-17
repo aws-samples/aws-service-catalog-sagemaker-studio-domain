@@ -86,7 +86,7 @@ We will use AWS CloudFormation to launch the portfolio and product in the AWS Se
 - From **AWS Management Console** go to **Service Catalog**. 
 - Click on `Portfolios` in the left hand navigation. 
 - Click on `Data Science Tools` portfolio to go to **Portfolio details** page.
-- Click on `Groups, roles, and users` tab, and then 'Add groups, roles, users' button. 
+- Click on `Groups, roles, and users` tab, and then `Add groups, roles, users` button. 
 - On `Add groups, roles, and users access to portfolio` screen, click on `Roles` tab. 
 - Select the role starting with `AWSReservedSSO_AWSAdministratorAccess_` and click on `Add access` button on the top right hand side. 
 - Navigate to `Products` on the left hand navigation. Now you will see `Amazon SageMaker Studio` product on the `Products` screen. 
@@ -94,7 +94,7 @@ We will use AWS CloudFormation to launch the portfolio and product in the AWS Se
   
 Once its launched you can see it under the `Provisioned products` section with status `Available`. 
 __
-You can now access your new `Amazon SageMaker Studio domain` in the `SageMaker` section in the `AWS Management Console`. In the console, you can click on `Assign users` to grant access to the studio domain. The new users will recieve an email whenever an access is granted or revoked from them. 
+You can now access your new `Amazon SageMaker Studio domain` under `Amazon SageMaker` service in the `AWS Management Console`. In the console, you can click on `Assign users` to grant access to the studio domain. If you have configured `Amazon SES` in the pre-requisites, then the users will recieve an email whenever an access is granted or revoked from them. 
 ​
 ### Steps to Access Amazon SageMaker Studio and assign users
 #### Access Amazon SageMaker Studio
