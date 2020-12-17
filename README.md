@@ -32,7 +32,7 @@ In this workshop, we want to demonstrate how you can create a Amazon SageMaker S
 
 ## How to run the workshop?
 
-**Note** Although the workshop code can be used to launch SageMaker Studio without Control Tower as well, but this workshop is focused on launching it in `AWS Control Tower Environment`. 
+**Note** Although the workshop code can be used to launch Amazon SageMaker Studio without Control Tower, but this workshop is focused on launching it in `AWS Control Tower Environment`. 
 If you plan to use it without AWS Control Tower, then refer to the following blog post for details: 
 [Creating Amazon SageMaker Studio domains and user profiles using AWS CloudFormation](https://aws.amazon.com/blogs/machine-learning/creating-amazon-sagemaker-studio-domains-and-user-profiles-using-aws-cloudformation/)
 
@@ -46,7 +46,7 @@ If you plan to use it without AWS Control Tower, then refer to the following blo
 ### Create a Portfolio and Product in Service Catalog
 
 - Login to **AWS Management console** with an `admin account` of the **AWS Control Tower**. 
-- Upload the folders: `templates` and `code` your `S3 bucket`.
+- Upload the folders: `templates` and `code` in your `S3 bucket`.
 - (Optional) Make sure your S3 bucket is versioned.
 - Go to `CloudFormation` service in your account. 
 - On the left hand navigation navigate to `Stacks`. 
