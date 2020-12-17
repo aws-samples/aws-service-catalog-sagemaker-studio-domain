@@ -41,7 +41,8 @@ If you plan to use it without AWS Control Tower, then refer to the following blo
 - AWS Contorl Tower should be set up. If its not, please follow the steps provided [here](https://controltower.aws-management.tools/core/overview/) to launch AWS Control Tower. 
 - At least two existing accounts associated with Users in the AWS SSO. You can follow the steps [here](https://controltower.aws-management.tools/core/accountfactory/) to launch a new account and create a new user in AWS SSO (only steps 1 & 2).
 - Make sure you don't have existing Studio domain in your account, because at the time of writing, an AWS account is limited to one domain per region. Creating extra domain will cause error. 
-- Set up and verify an email address in Amazon SES from where the users will recieve an email when the Amazon SageMaker Studio acess is granted or revoked. You can follow the steps [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quick-start.html) for the set up. 
+- (Optional) This is required only if you want to set up notifications, otherwise you can skip it. 
+  - Set up and verify an email address in Amazon SES from where the users will recieve an email when the Amazon SageMaker Studio acess is granted or revoked. You can follow the steps [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quick-start.html) for the set up. 
   
 ### Create a Portfolio and Product in Service Catalog
 
