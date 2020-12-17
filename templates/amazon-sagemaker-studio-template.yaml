@@ -66,6 +66,12 @@ Resources:
                   - iam:PassRole
                 Resource: 
                  Fn::GetAtt: SageMakerExecutionRole.Arn
+              - Sid: ServiceLinkedRole
+                Effect: Allow
+                Action:
+                  - iam:CreateServiceLinkedRole
+                Resource:
+                  - !Sub "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/aws-service-role/sagemaker.amazonaws.com/AWSServiceRoleForAmazonSageMakerNotebooks"
 
   SageMakerExecutionRole:
     Type: "AWS::IAM::Role"
