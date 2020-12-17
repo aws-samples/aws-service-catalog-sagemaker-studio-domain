@@ -4,7 +4,7 @@
 - [Launching Amazon SageMaker Studio Domain using AWS Service Catalog and AWS SSO](#launching-amazon-sagemaker-studio-domain-using-aws-service-catalog-and-aws-sso)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
-  - [AWS Services used in the solution-](#aws-services-used-in-the-solution-)
+  - [AWS Services used in the solution](#aws-services-used-in-the-solution)
       - [AWS Control Tower](#aws-control-tower)
       - [AWS Service Catalog](#aws-service-catalog)
       - [AWS Single Sign-On (SSO)](#aws-single-sign-on-sso)
@@ -26,7 +26,7 @@
 ​
 In this workshop, we want to demonstrate how you can create a Amazon SageMaker Studio domain using AWS Service Catalog and AWS SSO in your AWS Control Tower environment. 
 
-## AWS Services used in the solution-
+## AWS Services used in the solution
 
 #### [AWS Control Tower](https://aws.amazon.com/controltower/) 
 It provides the easiest way to set up and govern a new, secure, multi-account AWS environment based on best practices established through AWS’ experience working with thousands of enterprises as they move to the cloud. With AWS Control Tower, builders can provision new AWS accounts in a few clicks, while you have peace of mind knowing your accounts conform to your company-wide policies.
@@ -127,8 +127,9 @@ Repeat the following steps for each user in the User name list.
 - On the Delete app dialog, choose Yes, delete app, type delete in the confirmation field, and then choose Delete.
 - When the Status for all apps show as Deleted, choose Delete user.
 ​
-___
+
 _Important:_
+___
 When a user is deleted, they lose access to the Amazon EFS volume that contains their data, including notebooks and other artifacts.
 
 ## Security
