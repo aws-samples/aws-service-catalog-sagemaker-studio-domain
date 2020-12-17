@@ -58,7 +58,7 @@ If you plan to use it without AWS Control Tower, then refer to the following blo
 - At least two existing accounts associated with Users in the AWS SSO. You can follow the steps [here](https://controltower.aws-management.tools/core/accountfactory/) to launch a new account and create a new user in AWS SSO (only steps 1 & 2).
 - Make sure you don't have an existing Studio domain in your account, because at the time of writing this workshop, an AWS account is limited to one domain per region. Creating an extra domain will cause an error to occur. 
 - (Optional) This is required only if you want to set up notifications, otherwise you can skip it. 
-  - Set up and verify an email address in Amazon SES from where the users will recieve an email when the Amazon SageMaker Studio acess is granted or revoked. You can follow the steps [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quick-start.html) for the set up. ***NEEDS MORE INFO: which email to verify? each account or the root account we used to setup the portofolio?***
+  - Set up and verify an email address in Amazon SES from where the users will recieve an email when the Amazon SageMaker Studio acess is granted or revoked. You can follow the steps [here](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/quick-start.html) for the set up. 
   
 ### Create a Portfolio and Product in Service Catalog
 ​
