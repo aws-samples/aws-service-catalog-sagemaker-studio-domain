@@ -32,6 +32,10 @@ In this workshop, we want to demonstrate how you can create a Amazon SageMaker S
 
 ## How to run the workshop?
 
+**Note** Although the workshop code can be used to launch SageMaker Studio without Control Tower as well, but this workshop is focused on launching it in `AWS Control Tower Environment`. 
+If you plan to use it without AWS Control Tower, then refer to the following blog post for details: 
+[Creating Amazon SageMaker Studio domains and user profiles using AWS CloudFormation](https://aws.amazon.com/blogs/machine-learning/creating-amazon-sagemaker-studio-domains-and-user-profiles-using-aws-cloudformation/)
+
 ### Pre-requisites
 
 - AWS Contorl Tower should be set up. If its not, please follow the steps provided [here](https://controltower.aws-management.tools/core/overview/) to launch AWS Control Tower. 
@@ -42,12 +46,18 @@ In this workshop, we want to demonstrate how you can create a Amazon SageMaker S
 ### Create a Portfolio and Product in Service Catalog
 
 - Login to **AWS Management console** with an `admin account` of the **AWS Control Tower**. 
-- Upload the files in `template and code` folder to your `S3 bucket`.
-- Make sure your S3 bucket is versioned.
+- Upload the folders: `templates` and `code` your `S3 bucket`.
+- (Optional) Make sure your S3 bucket is versioned.
 - Go to `CloudFormation` service in your account. 
 - On the left hand navigation navigate to `Stacks`. 
 - Click on the `Create Stack` drop down on the top right hand side dropdown and select `With new resources (standard)`.
-- Provide the S3 object link for `workshop-deployment-template` in the `Amazon S3 URL text box`.
+- Provide the S3 object link for `aws-workshop-deployment-template.yaml` in the `Amazon S3 URL` text box as shown in the screenshot below.
+- 
+  <img src="./img/cloudformationS3Url.png"
+     alt="Amazon S3 URL Textbox"
+     width=520
+     height=350/>
+
 - Click on `Next` button. 
 - Provide the `S3 bucket name` in the `Step 2 Specify stack details` screen. 
 - Leave everything default on `Step 3 Configure stack options` screen and click `create stack` button in `Step 4 Review` screen after reviewing the necessary details.
