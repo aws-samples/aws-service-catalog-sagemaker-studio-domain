@@ -1,7 +1,7 @@
-# Launching Amazon SageMaker Studio Domain using AWS Service Catalog and AWS SSO
+# Launch Amazon SageMaker Studio using AWS Service Catalog and AWS SSO in AWS Control Tower Environment
 ​
 ## Table of Contents
-- [Launching Amazon SageMaker Studio Domain using AWS Service Catalog and AWS SSO](#launching-amazon-sagemaker-studio-domain-using-aws-service-catalog-and-aws-sso)
+- [Launch Amazon SageMaker Studio using AWS Service Catalog and AWS SSO in AWS Control Tower Environment](#launch-amazon-sagemaker-studio-using-aws-service-catalog-and-aws-sso-in-aws-control-tower-environment)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [AWS Services used in the solution](#aws-services-used-in-the-solution)
