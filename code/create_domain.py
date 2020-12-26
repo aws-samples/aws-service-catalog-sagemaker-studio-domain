@@ -9,7 +9,6 @@ client = boto3.client('sagemaker')
 
 
 def lambda_handler(event, context):
-    print(json.dumps(event))
     try:
         if event['RequestType'] == 'Create':
             handle_create(event, context)
@@ -24,16 +23,13 @@ def lambda_handler(event, context):
 
 
 def handle_create(event, context):
-    print("**Starting running the SageMaker workshop setup code")
     my_session = boto3.session.Session()
     my_region = my_session.region_name
-    print("**Current region identified: " + my_region)
     resource_config = event['ResourceProperties']
-
     print("**Creating studio domain")
     response_data = create_studio_domain(resource_config)
     cfnresponse.send(event, context, cfnresponse.SUCCESS,
-                     {}, physicalResourceId=response_data['DomainArn'])
+                     {'DomainId': response_data['DomainId']}, physicalResourceId=response_data['DomainArn'])
 
 
 def handle_delete(event, context):

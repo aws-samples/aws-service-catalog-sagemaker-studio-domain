@@ -9,20 +9,15 @@ Parameters:
     Description: VPC Id to launch SageMaker Studio domain
   SubnetIds:
     Type: AWS::EC2::Subnet::Id
-    Description: Subnet Id to launch SageMaker Studio domain
+    Description: Public subnet id to launch SageMaker Studio domain
   S3KeyLambdaLayer:
     Type: String
     Description: S3Key for lambda layer, cfnResponse-layer.zip
-    Default: "code/cfnResponse-layer.zip"
+    Default: "code/cfnResponse_layer.zip"
   S3KeyLambdaFunction:
     Type: String
-    Description: S3Key for lambda function code, function.zip
-    Default: "code/function.zip"
-  S3KeyLambdaEventFunction:
-    Type: String
-    Description: S3Key for lambda function code, function.zip
-    Default: "code/TargetLambdaFunction.zip"
-
+    Description: S3Key for lambda function code, create_domain.zip
+    Default: "code/create_domain.zip"
 
 Resources:
   LambdaExecutionRole:
@@ -92,7 +87,7 @@ Resources:
   StudioDomainFunction:
     Type: AWS::Lambda::Function
     Properties:
-      Handler: lambda_function.lambda_handler
+      Handler: create_domain.lambda_handler
       Role: 
         Fn::GetAtt: LambdaExecutionRole.Arn
       Code:
@@ -131,10 +126,3 @@ Resources:
       DefaultUserSettings:
         ExecutionRole: 
           Fn::GetAtt: SageMakerExecutionRole.Arn
-  EventBridge:
-    Type: AWS::CloudFormation::Stack
-    Properties: 
-      TemplateURL: !Sub https://s3.amazonaws.com/${S3Bucket}/templates/amazon-eventbridge-notification.yaml
-      Parameters: 
-        S3Bucket: !Ref S3Bucket
-        S3KeyLambdaEventFunction: !Ref S3KeyLambdaEventFunction
