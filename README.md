@@ -10,7 +10,6 @@
       - [AWS Single Sign-On (SSO)](#aws-single-sign-on-sso)
       - [Amazon SageMaker Studio](#amazon-sagemaker-studio)
       - [AWS CloudFormation](#aws-cloudformation)
-      - [Amazon Simple Email Service (SES)](#amazon-simple-email-service-ses)
   - [How to run the workshop?](#how-to-run-the-workshop)
     - [Pre-requisites](#pre-requisites)
     - [Create a Portfolio and Product in Service Catalog](#create-a-portfolio-and-product-in-service-catalog)
@@ -43,8 +42,6 @@ It is the first fully integrated development environment (IDE) for machine learn
 #### [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) 
 It gives you an easy way to model a collection of related AWS and third-party resources, provision them quickly and consistently, and manage them throughout their lifecycle, by treating infrastructure as code.
 ​
-#### [Amazon Simple Email Service (SES)](https://aws.amazon.com/ses/) 
-It is a cost-effective, flexible, and scalable email service that enables developers to send mail from within any application. With Amazon SES, you can send email securely, globally, and at scale.
 ​
 ## How to run the workshop?
 ​
