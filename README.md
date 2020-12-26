@@ -92,7 +92,7 @@ We will use AWS CloudFormation to launch the portfolio and product in the AWS Se
   
 Once its launched you can see it under the `Provisioned products` section with status `Available`. 
 __
-You can now access your new `Amazon SageMaker Studio domain` under `Amazon SageMaker` service in the `AWS Management Console`. In the console, you can click on `Assign users` to grant access to the studio domain. If you have configured `Amazon SES` in the pre-requisites, then the users will recieve an email whenever an access is granted or revoked from them. 
+You can now access your new `Amazon SageMaker Studio domain` under `Amazon SageMaker` service in the `AWS Management Console`. In the console, you can click on `Assign users` to grant access to the studio domain. 
 ​
 ### Steps to Access Amazon SageMaker Studio and assign users
 #### Access Amazon SageMaker Studio
